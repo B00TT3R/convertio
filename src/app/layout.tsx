@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Button } from "./components";
 import { classNames } from "./utils";
+import Footer from "./Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +44,7 @@ export default function RootLayout({
           <Button>Conversores</Button>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="border-green-600 text-green-100 border-t-2 py-4 h-32 mt-auto rounded-t-xl"></footer>
+        <Footer />
       </body>
     </html>
   );
