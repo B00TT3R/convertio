@@ -27,26 +27,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black min-h-screen flex flex-col`}
       >
         <header
           className={classNames(
             "flex w-full p-4 px-8 gap-4 items-center",
             "bg-black text-green-100",
-            "shadow-xl",
+            "shadow-xl border-b-2 border-green-600 rounded-b-xl",
           )}
         >
-          <h1 className="text-bold text-[40px] mr-auto border-green-600 border-x px-4 rounded-md">
+          <h1 className="text-bold text-[40px] mr-auto border-green-600 border-x px-4 rounded-lg">
             Convertio
           </h1>
-          <Button className="bg-transparent border-green-600 border-x text-green-100">
-            Home
-          </Button>
-          <Button className="bg-transparent border-green-600 border-x text-green-100">
-            Conversores
-          </Button>
+          <Button>Home</Button>
+          <Button>Conversores</Button>
         </header>
-        {children}
+        <main className="flex-1">{children}</main>
+        <footer className="border-green-600 text-green-100 border-t-2 py-4 h-32 mt-auto rounded-t-xl"></footer>
       </body>
     </html>
   );
