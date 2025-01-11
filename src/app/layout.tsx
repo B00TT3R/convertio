@@ -31,18 +31,18 @@ export default function RootLayout({
       >
         <header
           className={classNames(
-            "flex w-full p-4 px-8 gap-4 items-center ",
-            "from-red-500 to-red-200  bg-gradient-to-b text-white",
-            "border-b-4 border-purple-200",
+            "flex w-full p-4 px-8 gap-4 items-center",
+            "bg-black text-green-100",
+            "shadow-xl",
           )}
         >
-          <h1 className="text-bold text-[40px] mr-auto text-black">
+          <h1 className="text-bold text-[40px] mr-auto border-green-600 border-x px-4 rounded-md">
             Convertio
           </h1>
-          <Button className="bg-transparent !text-black border-black border">
+          <Button className="bg-transparent border-green-600 border-x text-green-100">
             Home
           </Button>
-          <Button className="bg-transparent !text-black border-black border">
+          <Button className="bg-transparent border-green-600 border-x text-green-100">
             Conversores
           </Button>
         </header>
