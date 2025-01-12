@@ -5,6 +5,7 @@ import { Button } from "./components";
 import { classNames } from "./utils";
 import Footer from "./LayoutComponents/Footer";
 import Header from "./LayoutComponents/Header";
+import { SidebarProvider } from "./context/SidebarContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black min-h-screen flex flex-col`}
       >
-        <Header />
-
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SidebarProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SidebarProvider>
       </body>
     </html>
   );
