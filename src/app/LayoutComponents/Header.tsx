@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        "flex w-full p-4 px-8 gap-4 items-center",
+        "flex w-full p-4 px-8 gap-4 items-center col-span-full",
         "bg-black text-green-100",
         "shadow-xl border-b-2 border-green-600 rounded-b-xl",
       )}
