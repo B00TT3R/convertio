@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { classNames } from "./utils";
+import { classNames } from "../utils";
 
 const Footer = () => {
   return (

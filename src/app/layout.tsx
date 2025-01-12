@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Button } from "./components";
 import { classNames } from "./utils";
-import Footer from "./Footer";
+import Footer from "./LayoutComponents/Footer";
+import Header from "./LayoutComponents/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,19 +31,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black min-h-screen flex flex-col`}
       >
-        <header
-          className={classNames(
-            "flex w-full p-4 px-8 gap-4 items-center",
-            "bg-black text-green-100",
-            "shadow-xl border-b-2 border-green-600 rounded-b-xl",
-          )}
-        >
-          <h1 className="text-bold text-[40px] mr-auto border-green-600 border-x px-4 rounded-lg">
-            Convertio
-          </h1>
-          <Button>Home</Button>
-          <Button>Conversores</Button>
-        </header>
+        <Header />
+
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
