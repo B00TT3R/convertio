@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       className={classNames(
-        "border-green-600 text-green-100",
+        "border-green-600 bg-gray-100 dark:bg-black text-black dark:text-green-100",
         "border-t-2 p-4 h-24 mt-auto rounded-t-xl flex",
       )}
     >

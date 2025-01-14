@@ -6,7 +6,7 @@ const Header = () => {
     <header
       className={classNames(
         "flex w-full p-4 px-8 gap-4 items-center col-span-full",
-        "bg-black text-green-100",
+        "bg-gray-100 text-black dark:bg-black dark:text-green-100",
         "shadow-xl border-b-2 border-green-600 rounded-b-xl",
       )}
     >

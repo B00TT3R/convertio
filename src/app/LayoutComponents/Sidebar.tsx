@@ -8,14 +8,14 @@ const Sidebar = () => {
   return (
     <aside
       className={classNames(
-        "bg-white dark:bg-black border-r-green-600 border-r-2 transition-all",
+        "bg-gray-100 dark:bg-black border-r-green-600 border-r-2 transition-all",
         "text-black dark:text-white overflow-hidden group",
         isOpen ? "w-72" : "w-14",
       )}
       data-open={isOpen || undefined}
     >
-      <header className="w-full p-0.5 group-data-[open]:p-4 items-center flex justify-between">
-        <h2 className="text-xl hidden group-data-[open]:inline">Menu</h2>
+      <header className="w-full p-0.5 group-data-[open]:p-2 items-center flex justify-between">
+        <h2 className="text-2xl hidden group-data-[open]:inline">Menu</h2>
         <Button
           onClick={toggle}
           className="flex-1 group-data-[open]:flex-initial"
