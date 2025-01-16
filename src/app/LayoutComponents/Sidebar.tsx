@@ -33,7 +33,12 @@ const Sidebar = () => {
           <span>{isOpen ? "Toggle" : "..."}</span>
         </Button>
       </header>
-      <footer className="mt-auto py-4">
+      <footer
+        className={classNames(
+          "mt-auto py-4",
+          "[--textColor:black] dark:[--textColor:white]",
+        )}
+      >
         <RadioGroup
           value={selected}
           onChange={setSelected}
@@ -46,11 +51,11 @@ const Sidebar = () => {
               className={classNames(
                 "flex flex-col-reverse justify-center items-center gap-1 relative",
                 "after:w-8 after:h-0.5 after:absolute",
-                "after:bg-black dark:after:bg-white",
+                "after:[--textColor]",
                 "after:left-full after:top-1/4 last:after:hidden",
 
                 "before:w-8 before:h-0.5 before:absolute",
-                "before:bg-black dark:before:bg-white",
+                "before:[--textColor]",
                 "before:right-full before:top-1/4 first:before:hidden",
               )}
             >
@@ -58,13 +63,11 @@ const Sidebar = () => {
                 value={plan}
                 className={classNames(
                   "group peer flex size-5 items-center justify-center rounded-full border",
-                  "dark:bg-white bg-gray-300",
+                  "dark:bg-white bg-gray-500",
                   "data-[checked]:bg-green-600",
                 )}
-              >
-                <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
-              </Radio>
-              <Label className="text-gray-500 peer-data-[checked]:text-white">
+              ></Radio>
+              <Label className="text-gray-500 peer-data-[checked]:text-[--textColor]">
                 {plan.icon}
               </Label>
             </Field>
