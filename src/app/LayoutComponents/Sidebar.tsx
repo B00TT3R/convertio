@@ -1,10 +1,11 @@
 "use client";
 import { Button } from "../components";
-import { useSidebarContext } from "../context/SidebarContext";
+import { useSidebar } from "../context/useSidebar";
+
 import { classNames } from "../utils";
 
 const Sidebar = () => {
-  const { isOpen, toggle } = useSidebarContext();
+  const { isOpen, toggle } = useSidebar();
   return (
     <aside
       className={classNames(

@@ -1,12 +1,12 @@
 "use client";
 import { Button } from "./components";
-import { useSidebarContext } from "./context/SidebarContext";
-import { useTheme } from "./context/ThemeContext";
+import { useSidebar } from "./context/useSidebar";
+import { useTheme } from "./context/useTheme";
 
 export default function Home() {
-  const sideBar = useSidebarContext();
+  const sideBar = useSidebar();
   console.log(sideBar.isOpen);
-  const [theme, setTheme] = useTheme();
+  const { theme, setTheme } = useTheme();
   console.log(theme);
 
   return (
