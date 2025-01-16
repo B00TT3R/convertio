@@ -1,10 +1,11 @@
 "use client";
 import { atom, useAtom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 import { useEffect } from "react";
 
 type Theme = "light" | "dark" | "system";
 
-const themeAtom = atom<Theme>("system");
+const themeAtom = atomWithStorage<Theme>("theme", "system");
 
 export const useTheme = () => {
   const [theme, setTheme] = useAtom(themeAtom);
